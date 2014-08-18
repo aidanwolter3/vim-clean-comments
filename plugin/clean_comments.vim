@@ -41,7 +41,9 @@ noremenu <script> Plugin.Add\ Function\ Comment  <SID>add_function_comment
 noremenu <script> Plugin.Add\ Section\ Comment  <SID>add_section_comment
 
 " global variables
-let g:clean_comment_width=70
+if !exists("g:clean_comment_width")
+  let g:clean_comment_width=70
+endif
 
 
 function s:add_function_comment()
